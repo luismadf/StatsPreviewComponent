@@ -50,7 +50,7 @@ main {
 .img_hero {
   position: relative;
   font-size: 0;
-  background-image: url("assets/images/image-header-mobile.jpg");
+  background-image: url("/assets/images/image-header-mobile.jpg");
   background-size: cover;
   height: 250px;
 }
@@ -140,7 +140,7 @@ ul li span {
     width: 50%;
     position: relative;
     font-size: 0;
-    background-image: url("assets/images/image-header-desktop.jpg");
+    background-image: url("/assets/images/image-header-desktop.jpg");
     background-size: cover;
     height: auto;
   }
