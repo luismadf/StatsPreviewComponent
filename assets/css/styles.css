@@ -1,0 +1,184 @@
+/* GENERAL STYLES */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+:root {
+  --dark-blue: hsl(244, 38%, 16%);
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --transparent-white-main: hsla(0, 0%, 100%, 0.75);
+  --stats-heading: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-size: 15px;
+  background-color: var(--very-dark-blue);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.attribution {
+  text-align: center;
+  color: var(--transparent-white-main);
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.attribution a {
+  color: var(--soft-violet);
+}
+
+/* MAIN */
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  background-color: var(--dark-blue);
+  margin: 5rem auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img_hero {
+  position: relative;
+  font-size: 0;
+  background-image: url("/assets/images/image-header-mobile.jpg");
+  background-size: cover;
+  height: 250px;
+}
+
+.overlay {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--soft-violet);
+  opacity: 0.7;
+  filter: brightness(60%) contrast(150%);
+}
+
+.info {
+  padding: 0 2rem;
+}
+
+.main_text {
+  padding: 2rem 0;
+}
+
+main h1 {
+  color: white;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1.8rem;
+}
+
+main h1 span {
+  color: var(--soft-violet);
+}
+
+main p {
+  margin-top: 1.3rem;
+  text-align: center;
+  color: var(--transparent-white-main);
+  line-height: 1.6;
+}
+
+/* STATS */
+
+.stats {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+ul li {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+ul li span {
+  display: block;
+  text-transform: uppercase;
+  margin-top: 0.66rem;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--stats-heading);
+}
+
+@media only screen and (min-width: 968px) {
+  body {
+    font-size: 20px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .attribution {
+    font-size: 0.9rem;
+  }
+
+  .img_hero {
+    width: 50%;
+    position: relative;
+    font-size: 0;
+    background-image: url("/assets/images/image-header-desktop.jpg");
+    background-size: cover;
+    height: auto;
+  }
+
+  .info {
+    padding: 2.5rem 4.5rem;
+    width: 50%;
+  }
+
+  .main_text {
+    padding: 2rem 0 4rem 0;
+  }
+
+  main h1 {
+    text-align: left;
+    font-size: 2.3rem;
+  }
+
+  main p {
+    width: 80%;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .stats {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+  }
+
+  .stats ul {
+    width: 80%;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .stats ul li {
+    align-items: flex-start;
+  }
+}
